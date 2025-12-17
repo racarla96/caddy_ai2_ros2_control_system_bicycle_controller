@@ -34,11 +34,5 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
-# Instalar archivos de lanzamiento
-install(
-  DIRECTORY bringup/
-  DESTINATION share/${PROJECT_NAME}
-)
-
 # Exportación para ament
 ament_package()
