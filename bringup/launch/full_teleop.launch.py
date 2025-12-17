@@ -39,6 +39,22 @@ def generate_launch_description():
         "robot_description_steering": steering_urdf,
     }
 
+    traction_robot_state_publisher = Node(
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        namespace="traction",
+        output="both",
+        parameters=[{"robot_description": traction_urdf}],
+    )
+
+    steering_robot_state_publisher = Node(
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        namespace="steering",
+        output="both",
+        parameters=[{"robot_description": steering_urdf}],
+    )
+
     # Lanzar ros2_control_node para traction y steering en namespaces separados
     traction_control_node = Node(
         package="controller_manager",
@@ -101,6 +117,8 @@ def generate_launch_description():
             ])
         ])
     )
+
+
 
     return LaunchDescription([
         traction_control_node,
