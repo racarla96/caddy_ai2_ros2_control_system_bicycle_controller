@@ -5,6 +5,7 @@ from launch.substitutions import PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
 from launch.substitutions import Command
 from launch.substitutions import FindExecutable
+from launch_ros.actions import Node
 from caddy_ai2_ros2_common.launch_utils import read_update_rate_from_controller_yaml
 
 def generate_launch_description():
