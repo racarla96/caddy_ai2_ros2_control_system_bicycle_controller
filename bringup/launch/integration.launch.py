@@ -9,8 +9,9 @@ from launch.event_handlers import OnProcessStart
 def generate_launch_description():
     config_file = PathJoinSubstitution([
         FindPackageShare("caddy_ai2_ros2_control_system_bicycle_controller"),
+        "bringup"
         "config",
-        "controllers.yaml"
+        "integration.yaml"
     ])
 
     # controller_manager node
