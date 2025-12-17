@@ -125,6 +125,8 @@ def generate_launch_description():
         steering_control_node,
         traction_joint_state_broadcaster,
         steering_joint_state_broadcaster,
+        traction_robot_state_publisher,
+        steering_robot_state_publisher,
         traction_velocity_controller,
         steering_controller,
         teleop_launch,
